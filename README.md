@@ -159,7 +159,7 @@ canvas = None
 
 
 def draw(event: int, x: int, y: int, flags: int, param) -> None:
-    """마우스 콜백: 커서 위치에 원을 그린다."""
+    # 마우스 콜백: 커서 위치에 원을 그린다.
     global canvas, brush_size
 
     # 좌클릭 또는 좌클릭 드래그 → 파란색
@@ -263,7 +263,7 @@ roi_img = None
 
 
 def mouse_callback(event: int, x: int, y: int, flags: int, param) -> None:
-    """마우스 콜백: 클릭-드래그로 ROI를 선택한다."""
+    # 마우스 콜백: 클릭-드래그로 ROI를 선택한다.
     global start_x, start_y, is_dragging
     global original_img, display_img, roi_img
 
