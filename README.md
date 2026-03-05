@@ -216,7 +216,7 @@ if __name__ == "__main__":
 
 ### 최종 결과물
 
-![practice02_final](https://github.com/user-attachments/assets/d10a41db-9900-4023-bb6e-d3943df4fb62)
+![practice02_final](https://github.com/user-attachments/assets/04ed8734-7968-4869-8030-3e01f549dc4f)
 
 ---
 
