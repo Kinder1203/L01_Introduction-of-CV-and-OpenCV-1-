@@ -1,27 +1,21 @@
-# Computer Vision OpenCV Practice (01-03)
+# Computer Vision OpenCV Practice (01–03)
 
-This README is organized for the assignment submission page.
-It includes:
-- assignment description
-- intermediate result slots
-- final result slots
-- code links
+This repository contains three OpenCV practice exercises from the Computer Vision course.
+Each exercise demonstrates core image processing concepts with fully commented Python code.
 
-## 1. Environment
+## Environment
 
 - Python 3.10+
 - `opencv-python`
 - `numpy`
 
-Install:
-
 ```bash
 pip install opencv-python numpy
 ```
 
-## 2. Run Commands
+## How to Run
 
-Run from project root (`computer_vison`):
+Run from the project root (`computer_vison/`):
 
 ```bash
 python practice_code/practice01_load_gray.py
@@ -29,28 +23,26 @@ python practice_code/practice02_paint_brush.py
 python practice_code/practice03_roi_select.py
 ```
 
-## 3. Practice 01: Load Image + Grayscale Conversion
+---
 
-### Assignment Description
+## Practice 01 — Load Image & Grayscale Conversion
 
-- Load an image with OpenCV.
-- Convert the image to grayscale.
-- Show original and grayscale images side-by-side.
-- Main APIs: `cv.imread()`, `cv.cvtColor()`, `np.hstack()`, `cv.imshow()`, `cv.waitKey()`
+### Description
 
-### Intermediate Result (GIF Slot)
+- Load an image with `cv.imread()`.
+- Convert to grayscale using `cv.cvtColor()` with `cv.COLOR_BGR2GRAY`.
+- Display original and grayscale side-by-side using `np.hstack()`.
+- `cv.imshow()` + `cv.waitKey(0)` to show the result; press any key to close.
 
-Put your GIF in `docs/images/` and keep this markdown:
+### Intermediate Result
 
-```md
+<!-- Place your intermediate GIF here -->
 ![practice01-mid](docs/images/practice01_mid.gif)
-```
 
-### Final Result (GIF Slot)
+### Final Result
 
-```md
+<!-- Place your final GIF here -->
 ![practice01-final](docs/images/practice01_final.gif)
-```
 
 ### Code
 
@@ -58,28 +50,25 @@ Put your GIF in `docs/images/` and keep this markdown:
 
 ---
 
-## 4. Practice 02: Paint Brush Size Control
+## Practice 02 — Paint Brush with Size Control
 
-### Assignment Description
+### Description
 
-- Paint on image using mouse input.
-- `+` key increases brush size by 1.
-- `-` key decreases brush size by 1.
-- Brush size range: min 1, max 15.
-- Left click/drag: blue, right click/drag: red.
+- Paint on an image using mouse input via `cv.setMouseCallback()`.
+- Left click/drag draws in **blue**, right click/drag draws in **red**.
+- `+` key increases brush size by 1, `-` key decreases by 1.
+- Brush size range: min 1, max 15. Initial size: 5.
 - `q` key exits.
 
-### Intermediate Result (GIF Slot)
+### Intermediate Result
 
-```md
+<!-- Place your intermediate GIF here -->
 ![practice02-mid](docs/images/practice02_mid.gif)
-```
 
-### Final Result (GIF Slot)
+### Final Result
 
-```md
+<!-- Place your final GIF here -->
 ![practice02-final](docs/images/practice02_final.gif)
-```
 
 ### Code
 
@@ -87,43 +76,25 @@ Put your GIF in `docs/images/` and keep this markdown:
 
 ---
 
-## 5. Practice 03: Mouse ROI Selection and Extraction
+## Practice 03 — Mouse ROI Selection & Extraction
 
-### Assignment Description
+### Description
 
-- Load image and select ROI by click-and-drag.
-- Draw rectangle while dragging.
-- On mouse release, crop ROI and show it in a separate window.
-- `r` key resets selection.
-- `s` key saves selected ROI.
+- Load an image and select a region of interest (ROI) by click-and-drag.
+- A green rectangle is drawn while dragging (`cv.rectangle()`).
+- On mouse release, the selected region is cropped (numpy slicing) and shown in a separate window.
+- `r` key resets selection, `s` key saves the ROI via `cv.imwrite()`, `q` key exits.
 
-### Intermediate Result (GIF Slot)
+### Intermediate Result
 
-```md
+<!-- Place your intermediate GIF here -->
 ![practice03-mid](docs/images/practice03_mid.gif)
-```
 
-### Final Result (GIF Slot)
+### Final Result
 
-```md
+<!-- Place your final GIF here -->
 ![practice03-final](docs/images/practice03_final.gif)
-```
 
 ### Code
 
 - [practice03_roi_select.py](./practice_code/practice03_roi_select.py)
-
----
-
-## 6. Code Comment Checklist
-
-- Function purpose comments are present.
-- Mouse/keyboard handling comments are present.
-- Basic error-handling comments are present.
-
-## 7. Submission Checklist
-
-- Assignment descriptions written.
-- Intermediate GIF slots added.
-- Final GIF slots added.
-- Code links added.
