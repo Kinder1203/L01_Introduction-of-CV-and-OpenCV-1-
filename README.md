@@ -1,20 +1,17 @@
-# Computer Vision Practice 01-03 (OpenCV)
+# Computer Vision OpenCV Practice (01-03)
 
-This repository contains beginner-level OpenCV assignments for:
-
-1. Loading an image and converting to grayscale.
-2. Mouse painting with brush size control.
-3. ROI (Region of Interest) selection by mouse drag.
-
-The implementation stays simple on purpose for first-week practice.
+This README is organized for the assignment submission page.
+It includes:
+- assignment description
+- intermediate result slots
+- final result slots
+- code links
 
 ## 1. Environment
 
-- OS: Windows (tested in PowerShell)
-- Python: 3.10+ recommended
-- Libraries:
-  - `opencv-python`
-  - `numpy`
+- Python 3.10+
+- `opencv-python`
+- `numpy`
 
 Install:
 
@@ -22,129 +19,111 @@ Install:
 pip install opencv-python numpy
 ```
 
-## 2. Project Files
+## 2. Run Commands
 
-- `practice01_load_gray.py`
-- `practice02_paint_brush.py`
-- `practice03_roi_select.py`
-- `soccer.jpg`
-- `girl_laughing.jpg`
-
-## 3. Assignment Mapping (Requirement Check)
-
-### Practice 01: Load + Grayscale + Side-by-side output
-
-- Uses `cv.imread()` to load image.
-- Uses `cv.cvtColor(..., cv.COLOR_BGR2GRAY)` for grayscale conversion.
-- Uses `np.hstack()` to merge two images horizontally.
-- Uses `cv.imshow()`, `cv.waitKey(0)`, `cv.destroyAllWindows()`.
-- Includes defensive check (`if src is None: sys.exit(...)`).
-- Handles channel mismatch before `hstack` by converting grayscale to BGR (`cv.COLOR_GRAY2BGR`).
-
-### Practice 02: Painting + Brush size control
-
-- Initial brush size: `5`.
-- `+` or `=` increases size by `1`.
-- `-` decreases size by `1`.
-- Brush size range is clamped to `1..15`.
-- Left click/drag draws blue.
-- Right click/drag draws red.
-- `q` closes the window.
-- Keyboard input is processed in loop with `cv.waitKey(1)`.
-
-### Practice 03: ROI selection and extraction
-
-- Loads image and displays it.
-- Uses `cv.setMouseCallback()` for mouse events.
-- Drag draws rectangle (`cv.rectangle`) while selecting.
-- On mouse release, selected ROI is cropped with NumPy slicing and shown in a separate window.
-- `r` resets selection.
-- `s` saves selected ROI using `cv.imwrite("roi.jpg", roi_img)`.
-- Reverse drag direction is handled with `min/max` coordinate normalization.
-
-## 4. How To Run
-
-Run each script from project root:
+Run from project root (`computer_vison`):
 
 ```bash
-python practice01_load_gray.py
-python practice02_paint_brush.py
-python practice03_roi_select.py
+python practice_code/practice01_load_gray.py
+python practice_code/practice02_paint_brush.py
+python practice_code/practice03_roi_select.py
 ```
 
-You can also pass an image path manually:
+## 3. Practice 01: Load Image + Grayscale Conversion
 
-```bash
-python practice01_load_gray.py soccer.jpg
-python practice02_paint_brush.py girl_laughing.jpg
-python practice03_roi_select.py soccer.jpg
-```
+### Assignment Description
 
-## 5. Mid Results / Final Results (for GitHub report)
+- Load an image with OpenCV.
+- Convert the image to grayscale.
+- Show original and grayscale images side-by-side.
+- Main APIs: `cv.imread()`, `cv.cvtColor()`, `np.hstack()`, `cv.imshow()`, `cv.waitKey()`
 
-Create image captures and place them in `docs/images/`.
+### Intermediate Result (GIF Slot)
 
-Recommended capture list:
-
-- Practice 01
-  - Mid: original image loaded
-  - Final: `Original | Gray` combined output
-- Practice 02
-  - Mid: blue painting with default brush size
-  - Mid: brush size changed (`+` or `-`)
-  - Final: blue + red painted result
-- Practice 03
-  - Mid: dragging rectangle on source image
-  - Final: ROI popup window
-  - Final: saved file result (`roi.jpg`)
-
-Example markdown blocks (replace file names with real captures):
+Put your GIF in `docs/images/` and keep this markdown:
 
 ```md
-### Practice 01 Result
-![p01-final](docs/images/p01_final.png)
-
-### Practice 02 Result
-![p02-mid](docs/images/p02_mid_brush.png)
-![p02-final](docs/images/p02_final.png)
-
-### Practice 03 Result
-![p03-mid](docs/images/p03_mid_drag.png)
-![p03-final-roi](docs/images/p03_final_roi.png)
+![practice01-mid](docs/images/practice01_mid.gif)
 ```
 
-## 6. Code Section For GitHub Page
+### Final Result (GIF Slot)
 
-For the assignment "code on GitHub page" requirement, include direct links:
-
-- [practice01_load_gray.py](./practice01_load_gray.py)
-- [practice02_paint_brush.py](./practice02_paint_brush.py)
-- [practice03_roi_select.py](./practice03_roi_select.py)
-
-Current code includes many line-by-line comments to match the "comment as much as possible" request.
-
-## 7. GitHub Upload Steps
-
-Run these commands in project root:
-
-```bash
-git init
-git add .
-git commit -m "Add OpenCV practice 01-03 with README and comments"
-git branch -M main
-git remote add origin <YOUR_GITHUB_REPO_URL>
-git push -u origin main
+```md
+![practice01-final](docs/images/practice01_final.gif)
 ```
 
-If a repo already exists, skip `git init` and just use:
+### Code
 
-```bash
-git add .
-git commit -m "Update assignment README and practice code"
-git push
+- [practice01_load_gray.py](./practice_code/practice01_load_gray.py)
+
+---
+
+## 4. Practice 02: Paint Brush Size Control
+
+### Assignment Description
+
+- Paint on image using mouse input.
+- `+` key increases brush size by 1.
+- `-` key decreases brush size by 1.
+- Brush size range: min 1, max 15.
+- Left click/drag: blue, right click/drag: red.
+- `q` key exits.
+
+### Intermediate Result (GIF Slot)
+
+```md
+![practice02-mid](docs/images/practice02_mid.gif)
 ```
 
-## 8. Note
+### Final Result (GIF Slot)
 
-- Your local file is `girl_laughing.jpg` (with `g`), not `girl_laughin.jpg`.
-- If needed, rename file or pass exact path explicitly when running scripts.
+```md
+![practice02-final](docs/images/practice02_final.gif)
+```
+
+### Code
+
+- [practice02_paint_brush.py](./practice_code/practice02_paint_brush.py)
+
+---
+
+## 5. Practice 03: Mouse ROI Selection and Extraction
+
+### Assignment Description
+
+- Load image and select ROI by click-and-drag.
+- Draw rectangle while dragging.
+- On mouse release, crop ROI and show it in a separate window.
+- `r` key resets selection.
+- `s` key saves selected ROI.
+
+### Intermediate Result (GIF Slot)
+
+```md
+![practice03-mid](docs/images/practice03_mid.gif)
+```
+
+### Final Result (GIF Slot)
+
+```md
+![practice03-final](docs/images/practice03_final.gif)
+```
+
+### Code
+
+- [practice03_roi_select.py](./practice_code/practice03_roi_select.py)
+
+---
+
+## 6. Code Comment Checklist
+
+- Function purpose comments are present.
+- Mouse/keyboard handling comments are present.
+- Basic error-handling comments are present.
+
+## 7. Submission Checklist
+
+- Assignment descriptions written.
+- Intermediate GIF slots added.
+- Final GIF slots added.
+- Code links added.
