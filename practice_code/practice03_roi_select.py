@@ -19,7 +19,7 @@ roi_img = None  # 추출된 ROI 영역 (선택 없으면 None)
 
 
 def mouse_callback(event: int, x: int, y: int, flags: int, param) -> None:
-    """마우스 콜백: 클릭-드래그로 ROI를 선택한다."""
+    # 마우스 콜백: 클릭-드래그로 ROI를 선택한다.
     global start_x, start_y, is_dragging
     global original_img, display_img, roi_img
 
