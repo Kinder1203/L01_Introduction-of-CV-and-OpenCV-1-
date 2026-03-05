@@ -8,8 +8,11 @@ Each exercise demonstrates core image processing concepts with fully commented P
 - Python 3.10+
 - `opencv-python`
 - `numpy`
+- Anaconda (conda)
 
 ```bash
+conda create -n cv python=3.10
+conda activate cv
 pip install opencv-python numpy
 ```
 
