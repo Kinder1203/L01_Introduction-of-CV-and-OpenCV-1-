@@ -15,7 +15,7 @@ canvas = None
 
 
 def draw(event: int, x: int, y: int, flags: int, param) -> None:
-    """마우스 콜백: 커서 위치에 원을 그린다."""
+    # 마우스 콜백: 커서 위치에 원을 그린다.
     global canvas
     global brush_size
 
