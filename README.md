@@ -105,13 +105,12 @@ if __name__ == "__main__":
 
 ### 중간 결과물
 
-<!-- 중간 결과 GIF를 여기에 넣으세요 -->
-![practice01-mid](docs/images/practice01_mid.gif)
+
 
 ### 최종 결과물
 
-<!-- 최종 결과 GIF를 여기에 넣으세요 -->
-![practice01-final](docs/images/practice01_final.gif)
+
+![practice01_final](https://github.com/user-attachments/assets/146f5d41-12ec-4e81-b3ec-f004045b824f)
 
 ---
 
@@ -338,10 +337,8 @@ if __name__ == "__main__":
 
 ### 중간 결과물
 
-<!-- 중간 결과 GIF를 여기에 넣으세요 -->
-![practice03-mid](docs/images/practice03_mid.gif)
+![practice03_mid](https://github.com/user-attachments/assets/a91151bd-89cd-4ce5-a008-c4a6f92538bc)
 
 ### 최종 결과물
 
-<!-- 최종 결과 GIF를 여기에 넣으세요 -->
-![practice03-final](docs/images/practice03_final.gif)
+![practice03_final](https://github.com/user-attachments/assets/7d3223cd-a7fd-48ca-b889-7d500bb1e1f5)
